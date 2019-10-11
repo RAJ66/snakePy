@@ -1,5 +1,11 @@
+#https://youtu.be/H4TXHI9BRCQ?t=712
 import pygame, random
 from pygame.locals import *
+
+def on_grid_rando():
+    x=random.randint(0,590)
+    y=random.randint(0,590)
+    return(x//10*10,y//10*10)
 
 UP = 0
 RIGHT = 1
@@ -14,7 +20,7 @@ snake_skin.fill((255, 255, 255))
 
 apple = pygame.Surface((10,10))
 apple.fill((255,0,0))
-apple_pos = (random.randint(0,590),random.randint(0,590))
+apple_pos = (on_grid_rando())
 
 snake = [(200, 200), (210, 200), (220, 200)]
 my_directio = LEFT
