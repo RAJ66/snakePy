@@ -53,6 +53,11 @@ while True:
         pygame.quit()
         exit() 
 
+    for i in range(1,len(snake)-1):
+        if snake[0][0] ==snake[i][0] and snake[0][1] ==snake[i][1]:
+            pygame.quit()
+            exit()
+
     for i in range(len(snake)-1,0,-1):
         snake[i] = (snake[i-1][0],snake[i-1][1])    
 
