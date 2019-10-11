@@ -48,6 +48,11 @@ while True:
         apple_pos  = on_grid_rando()
         snake.append((0,0))  
 
+
+    if snake[0][0] ==600 or snake[0][1] ==600 or snake[0][0] <0 or snake[0][1] <0:
+        pygame.quit()
+        exit() 
+
     for i in range(len(snake)-1,0,-1):
         snake[i] = (snake[i-1][0],snake[i-1][1])    
 
